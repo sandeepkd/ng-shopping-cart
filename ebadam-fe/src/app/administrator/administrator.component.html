@@ -1,0 +1,58 @@
+<div class="ref-app">
+    <div class="bg-light-out bg-big">
+        <div class="fade-in-down smooth access-navbar height-wrapper">
+            <div class="col-md-5 col-sm-5 signin-col ng-scope">
+                <div class="center-block w-auto-xs signin-form">
+                    <div class="p-lg panel md-whiteframe-z1 signin-box text-color">
+
+                        <mat-card class="refer-card">
+                            <div class="text-center">
+                               <h1>Administrator | Login</h1>
+                            </div>
+
+                            <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()" class="refer-form">
+                                    <mat-form-field class="refer-full-width">
+                                        <mat-label>Username</mat-label>
+                                        <input matInput type="text" formControlName="username" placeholder="Username" required>
+                                    </mat-form-field>
+
+                                    <mat-form-field class="refer-full-width">
+                                        <mat-label>Password</mat-label>
+                                        <input matInput type="password" formControlName="password" placeholder="password" required>
+                                    </mat-form-field>
+
+                                    <button type="submit" mat-raised-button color="primary" [disabled]="!loginForm.valid" tabindex="2">Log in</button>
+                                   
+                                <div class="row">
+                                    <div class="text-right">
+                                        <a href="#" rel="" target="_blank"> Forgot password? </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </mat-card>
+                    </div>
+                   
+                 
+                    <!-- <div class="signin-footer">
+                        <div class="col-sm-12 text-center">
+                            <p class="text-center">
+                                ®2020 Referal - EASY, All rights reserved.
+                                <a href="#" rel="noopener" target="_blank">Terms</a>
+                                and
+                                <a href="#" rel="noopener" target="_blank">Privacy</a>
+                            </p>
+                        </div>
+                    </div> -->
+                        
+                </div>
+            </div>
+            <div class="col-md-7 col-sm-7 content-col ng-scope">
+                <div class="row">
+                    <div class="col-sm-12">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

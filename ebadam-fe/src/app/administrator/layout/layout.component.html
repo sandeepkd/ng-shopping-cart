@@ -1,0 +1,36 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <ng-material-multilevel-menu  
+    [configuration]='config' 
+    [items]='appitems'
+    [expandCollapseStatus]="expandCollapseStatus">
+    </ng-material-multilevel-menu>
+  </mat-drawer>  
+    <div class="example-sidenav-content">
+      <nav class="mat-elevation-z6">
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+                <div class="desk-menu">
+                    <button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
+                </div>
+                <div class="nav-menu">
+                    <h1>eBadam</h1>
+                </div>
+                <div class="nav-meno-icon">
+                   
+                    <span class="profile-wgt">&nbsp;&nbsp;&nbsp;Hi, Goutam </span>
+                    <button mat-icon-button mat-button [matMenuTriggerFor]="menu">
+                        <mat-icon>keyboard_arrow_down</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item (click)="logout()"><span>Logout</span></button>
+                      </mat-menu>
+                </div>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </nav>
+
+    <router-outlet></router-outlet>
+
+    </div>
+  </mat-drawer-container>

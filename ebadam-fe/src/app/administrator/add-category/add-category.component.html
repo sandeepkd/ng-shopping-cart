@@ -1,0 +1,34 @@
+<div class="material-app">
+    <div class="main-body">
+        <div class="graphical-presentation">
+            <div class="row-full">
+                <div class="form">
+                    <div class="heading">
+                        <h2>Add Category</h2>
+                    </div>
+                    <form [formGroup]="categoryForm" (ngSubmit)="addCategory()">
+                        <mat-form-field style="width: 100%;" appearance="fill">
+                            <mat-label>Category Name</mat-label>
+                            <input matInput type="text" formControlName="cat_name" placeholder="Category Name" required>
+                        </mat-form-field>
+
+                        <mat-form-field style="width: 100%;" appearance="fill">
+                            <mat-label>Description</mat-label>
+                            <textarea matInput formControlName="description" placeholder="Description"
+                                required></textarea>
+                        </mat-form-field>
+
+                        <button type="submit" mat-raised-button color="primary" [disabled]="!categoryForm.valid"
+                            tabindex="2">Submit</button>&nbsp;
+                             <button type="submit" mat-raised-button color="accent" (click)="backCategory()" tabindex="3">Back</button>
+
+                            
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="clr"></div>
+        <!--common footer-->
+    </div>
+</div>

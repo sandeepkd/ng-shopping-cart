@@ -1,0 +1,48 @@
+<div class="material-app">
+    <div class="main-body">
+        <div class="graphical-presentation">
+            <div class="row-full">
+                <div class="form">
+                    <div class="heading">
+                        <h2>Edit Product</h2>
+                    </div>
+
+                    <form [formGroup]="ProductForm" (ngSubmit)="updateProduct()">
+
+                        <mat-form-field style="width: 48%;" appearance="fill">
+                            <mat-label>Category</mat-label>
+                            <mat-select formControlName="cat_id" required>
+                              <mat-option *ngFor="let Category of categories" [value]="Category._id">
+                                {{Category.cat_name}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        <mat-form-field style="width: 48%;" appearance="fill">
+                            <mat-label>Product Name</mat-label>
+                            <input matInput type="text" formControlName="prod_name" value="{{data.prod_name}}" placeholder="Product Name" required>
+                        </mat-form-field>
+                        <mat-form-field style="width: 48%;" appearance="fill">
+                            <mat-label>Short Description</mat-label>
+                            <textarea matInput formControlName="short_description" value="{{data.short_description}}" placeholder="Short Description"
+                                required></textarea>
+                        </mat-form-field>
+                        <mat-form-field style="width: 48%;" appearance="fill">
+                            <mat-label>Description</mat-label>
+                            <textarea matInput formControlName="description"  value="{{data.description}}" placeholder="Description"
+                                required></textarea>
+                        </mat-form-field>
+                        <mat-form-field style="width: 48%;" appearance="fill">
+                            <mat-label>Price Per KG</mat-label>
+                            <input matInput type="text" formControlName="price_per_kg" value="{{data.price_per_kg}}" placeholder="0.00" required>
+                        </mat-form-field>
+                        <button type="submit" mat-raised-button color="primary" [disabled]="!ProductForm.valid"
+                            tabindex="2">Submit</button>&nbsp;
+                             <button type="submit" mat-raised-button color="accent" (click)="backtoList()" tabindex="3">Back</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="clr"></div>
+        <!--common footer-->
+    </div>
+</div>

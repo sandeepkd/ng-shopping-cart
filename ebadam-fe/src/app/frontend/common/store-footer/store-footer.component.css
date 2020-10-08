@@ -1,0 +1,10 @@
+.big-footer{ background: #333333; color: #fff; position: static; bottom: 0;}
+.footer-widgets { max-width: 1120px; width: 100%; display: block; margin: auto; padding-top: 20px;}
+.footer-widgets .widget{ display: inline-block;  width: 33.33%;}
+.footer-bottom{ text-align: center; font-size: 12px; padding: 8px; position: static; bottom: 0;  background: #474034;}
+.widget-title{ font-weight: 500; font-size: 18px;}
+.content{ font-size: 13px;}
+.content ul{ padding-top: 8px; padding-left: 5px; font-size: 13px;}
+.content ul li{ list-style-type: none; padding: 5px 0;}
+.content ul li a{ text-decoration: none; color: #ffffff;}
+.content ul li a:hover{ color: #f58634;}

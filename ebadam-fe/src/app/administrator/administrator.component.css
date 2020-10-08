@@ -1,0 +1,130 @@
+.ref-app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.bg-light-out {
+    background-color: var(--pale-grey);
+}
+
+.bg-big {
+    height: 100%;
+}
+
+p{ padding: 5px;}
+.signin-col {
+    height: 99.9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 700px;
+    background-color: #f7f7fc!important;
+}
+.text-center {
+    text-align: center;
+}
+.text-right{ 
+    text-align: right;
+}
+.access-navbar .navbar {
+    position: relative;
+}
+.refer-card {
+    max-width: 100%;
+  }
+
+.refer-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.refer-full-width {
+    width: 100%;
+}
+.signin-form {
+    width: 96%;
+}
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.content-col {
+    background-color: #ffffff;
+    background-size: cover;
+    position: relative;
+    /* height: 100vh; */
+    min-height: 700px;
+    display: inline-table;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forgot-password-box, .signin-col .signin-box, .signup-box {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.07)!important;
+}
+
+.content-col .concierge-description, .content-col .concierge-title {
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+
+.signin-footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-family: Lato;
+    font-size: 9.6px;
+    color: var(--steel-grey);
+}
+
+.content-col{ background: url(../../assets/images/login.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;}
+
+.content-col .concierge-description {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.38;
+}
+
+
+/** ---Responsive css---- **/
+@media (min-width: 1200px){
+
+.signin-form {
+    width: 460px;
+}
+.col-lg-offset-2 {
+    margin-left: 0.666667%;
+}
+
+}
+
+@media (min-width: 992px){
+
+.col-md-5 {
+    width: 41.66666667%;
+}
+.col-md-7 {
+    width: 58.33333333%;
+}
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+}
+
+}
+
+@media (max-width: 768px){
+
+.content-col{ height:0px; display: none;}
+.signin-col { min-height: 400px; }
+
+}

@@ -1,0 +1,55 @@
+<div class="homePage">
+    <div class="storeFront">
+        <div class="full-width">
+          <app-store-header></app-store-header>
+         
+       
+            <section class="products-section" style="min-height: 500px;">
+                <div class="containter">
+                    
+                    <div class="col-12">
+                        <div class="page-title"><h2 class="title">Register</h2></div>
+                        <div class="form">
+                            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                                <div class="form-full-width">
+                                    <mat-form-field style="width: 100%;" appearance="fill">
+                                    <mat-label>Name</mat-label>
+                                        <input matInput type="text" placeholder="Enter Name"  formControlName="fullname">
+                                    </mat-form-field>
+                                  <mat-form-field style="width: 100%;" appearance="fill">
+                                    <mat-label>Username</mat-label>
+                                    <input matInput type="text" placeholder="Enter username"  formControlName="username">
+                                  </mat-form-field>
+                                  <mat-form-field style="width: 100%;" appearance="fill">
+                                    <mat-label>Email</mat-label>
+                                    <input matInput type="email" placeholder="Enter Email"  formControlName="email">
+                                  </mat-form-field>
+                                  <mat-form-field style="width: 100%;" appearance="fill">
+                                    <mat-label>Password</mat-label>
+                                    <input matInput type="password" placeholder="Password"  formControlName="password">
+                                  </mat-form-field>
+                                  <mat-form-field style="width: 100%;" appearance="fill">
+                                    <mat-label>Address</mat-label>
+                                    <textarea matInput placeholder="address"  formControlName="address"></textarea>
+                                  </mat-form-field>
+                                  <button mat-raised-button type="submit" color="primary"  [disabled]="!registerForm.valid">Login</button>
+                                <p style="display: inline-block; padding: 4px 10px;"><a routerLink="/login" title="lLogin">Already member? Please Login.</a> </p>
+                            
+                                <small><br>* By continuing, you agree to our <a href="#">Conditions of Use</a> and <a href="">Privacy Notice</a>.</small>
+                                   
+                            </div>
+
+
+
+
+                              </form>
+                        </div>
+                    </div>
+                   
+                </div>
+            </section>
+
+           <app-store-footer></app-store-footer>
+        </div>
+    </div>
+</div>

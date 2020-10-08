@@ -1,0 +1,216 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { 
+    background-color: #f7f7fc!important; 
+    padding: 0; 
+    margin: 0;
+}
+
+a{ 
+    color: #000000; 
+}
+
+body { 
+    margin: 0; 
+    font-family: Roboto, Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif; 
+}
+
+h1, h2, h3, h4, h5 { 
+    font-family: Roboto, Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif; font-weight: 400;
+}
+
+.containter{ max-width: 1456px; margin: auto; display: block; background: #ffffff; padding-bottom: 50px;}
+
+.heading { 
+    width: 100%;
+}
+
+.main-body { 
+    margin-top: 30px;
+    padding: 0px 60px;
+}
+
+.material-app {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+a.activeClass{ 
+    border: 1px solid #f7f7fc;
+ }
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.material-app > .main-body{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.material-app > .box-body{
+    margin-top: 30px;
+    display: block;
+    overflow: auto;
+}
+
+.boxed-layout{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.clr{
+    clear: both;
+    display: block;
+}
+
+.pull-right { 
+    float: right;
+}
+
+.row-full {
+    clear: both;
+    margin-bottom: 30px;
+}
+
+.col-6 {
+    width: 49.5%;
+    float: left;
+}
+
+.col-4{
+    width: 24.9999%;
+    float: left;
+    background-color: #ffffff;
+    min-height: 300px;
+}
+
+.col-3{
+    width: 33.333%;
+    float: left;
+    min-height: 300px;
+}
+
+.nav-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-meno-icon{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    min-width: 150px;
+    height: 100%;
+    margin-right: 16px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-item {
+    flex-basis: 98%;
+}
+
+.footer {
+    height: 30px;
+    font-size: 11px;
+    width: 98%;
+    margin-top: 20px;
+}
+.profile-wgt{ font-size: 16px; font-weight: 400;}
+
+.templateDiv{
+    width: 100%;
+    min-height: 410px;
+    padding: 4px;
+    color: #ffffff;
+}
+
+.mat-drawer.mat-drawer-side{ z-index: 0 !important; }
+.mat-toolbar-row, .mat-toolbar-single-row{ padding: 0 6px !important; }
+
+
+/*----StoreFront Style-----*/
+.nav-storeFront{ height: 116px; background: #ffdcc8; position: sticky; top: 0; left: 0; right: 0; z-index: 2; display: block; float: none; }
+.storeFront{ width: 100%; }
+h3.title{ font-size: 21px; }
+
+.page-title h2.title{text-align: center; padding: 10px; margin: 20px; border-bottom: 2px solid #c2c2c2;}
+.section-title{ text-align: center; padding: 10px; margin: 60px; border-bottom: 2px solid #c2c2c2;}
+.storeFront section .banner{ position: relative; height: 500px; width: 100%; max-width:1576px;  text-align: center; display: block; margin: auto; }
+.nav-top{ width: 100%; display: block; height: 62px; clear: both;}
+.nav-bottom{ width: 100%; display: block; text-align: right;height: 46px; background: #64300a; }
+.nav-left,.nav-mid,.nav-right{ display: inline-block; }
+.nav-fill{ height: 60px; }
+.nav-left{ float: left; width: 26%; }  
+.nav-mid{ width: 43%; }
+.nav-bottom ul{ display: inline-block; }
+.nav-bottom ul li{ display: inline-block; list-style-type: none; padding: 0px 20px; }
+.nav-bottom ul li a{ text-decoration: none; color: #f7f7fc;}
+.nav-right{ float:right; width: 30%; text-align: right; }
+.nav-widget{ text-align: right; padding: 18px 28px; display: inline-block; color: #64300a; font-weight: 500;}
+.nav-widget mat-icon{ vertical-align: bottom;}
+.header-cart{padding-right: 20px;}
+.menu-btn{margin-top: 22px;vertical-align: top; background: transparent; border: 1px solid #33333342; margin: 22px 12px 0;}
+.ebadam-search{ width: 90%; padding: 7px; margin-top: 28px; outline: none; border-radius: 4px 0 0 4px; border: 1px solid #cd9494; border-right: none;}
+.search-btn{padding: 8px; color: #ffffff; background: #64300a; outline: none; border-radius: 0 4px 4px 0; border: 1px solid #cd9494; border-left: none;}
+.banner-widgets{ position: absolute; bottom: 0; text-align: center; display: block;  width: 100%; }
+.banner-widgets .widgets{ margin: 0 15px; width: 18.5%; background: #f58634; cursor: pointer; min-height: 200px; border: 32px solid #fae184c2; display: inline-block; }
+.banner-widgets .widgets h2{  padding-top: 25%; color: #64300a; font-size: 20px; text-transform: uppercase; cursor: pointer; }
+.banner-widgets .widgets h2:hover{ color: #c20d0d; }
+.widgetInner .btn{ padding: 8px 70px; border: none; outline: none; font-weight: bold; text-decoration: none; cursor: pointer; color: #fff; background: #fcb40b; border-radius: 3px;}
+.header-cart{ text-align: right;}
+
+.home-grid img{ width: 100%;}
+
+.cart-button{ margin: auto; text-align: center; margin: 8px;}
+.cart-button button{ font-size: 15px; line-height: 24px; border: 1px solid #f58634; outline: none; font-weight: 500 ;background: #f58634; color: #f7f7fc; cursor: pointer; padding: 4px 8px; border-radius: 3px;}
+.cart-button button:hover{ background: #fcb40b;}
+.cart-button button mat-icon{ vertical-align: bottom; font-size: 24px;}
+.price-box{ padding: 10px;}
+.price-box span{ margin: 0 5px;}
+/* Responsive CSS */
+
+@media (max-width: 768px){
+    .mobile-menu{ 
+        display: block;
+    }
+
+    .desk-menu{ 
+        display: none;
+    }
+
+    .nav-meno-icon{ display: none;}
+
+    .col-6 {
+        width: 92%;
+        margin-bottom: 30px;
+    }
+
+    .flex {
+        display: block;
+    }
+
+    .row-full { 
+        margin-bottom: 0px;
+    }
+    .flex-item {
+        flex-basis: auto;
+    }
+}

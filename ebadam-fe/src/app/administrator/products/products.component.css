@@ -1,0 +1,36 @@
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.align-right{
+  text-align: right;
+}
+
+.w-10{
+  width: 10%;
+}
+
+.w-15{
+  width: 15%;
+}
+
+.w-20{
+  width: 20%;
+}
+
+.th-center{
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  min-width: 500px;
+}
+
+th.mat-header-cell {
+  text-align: left;
+  max-width: 300px;
+}

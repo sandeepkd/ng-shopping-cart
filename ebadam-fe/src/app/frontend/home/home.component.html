@@ -1,0 +1,127 @@
+<div class="homePage">
+    <div class="storeFront">
+        <div class="full-width">
+          <app-store-header></app-store-header>
+          <!-- Banner Section Starts -->
+            <section class="banner-sections">
+                <div class="banner">
+                    <mat-carousel
+                    timings="250ms ease-in"
+                    [autoplay]="true"
+                    interval="5000"
+                    color="accent"
+                    maxWidth="auto"
+                    proportion="25"
+                    slides="5"
+                    [loop]="true"
+                    [hideArrows]="false"
+                    [hideIndicators]="true"
+                    [useKeyboard]="true"
+                    [useMouseWheel]="false"
+                    orientation="ltr"
+                  >
+                    <mat-carousel-slide
+                      #matCarouselSlide
+                      *ngFor="let slide of slides; let i = index"
+                      [image]="slide.image"
+                      overlayColor="#00000040"
+                      [hideOverlay]="false"
+                    ></mat-carousel-slide>
+                  </mat-carousel>
+
+                    <div class="banner-widgets">
+                            <div class="widgets">
+                                <div class="widgetInner"><h2>Spices</h2></div>
+                            </div>
+                            <div class="widgets">
+                                <div class="widgetInner"><h2>Fruits</h2></div>
+                            </div>
+                            <div class="widgets">
+                                <div class="widgetInner"><h2>Dehydrated Fruits</h2></div>
+                            </div>
+                            <div class="widgets">
+                                <div class="widgetInner"><h2><button class="btn">Hi, Signin</button></h2></div>
+                            </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Banner section ends -->
+            <section class="products-section" id="todaysDeal">
+              <div class="containter">
+                  <div class="section-title"><h3 class="title">TODAY'S DEAL FOR YOURS</h3></div>
+                   <div class="home-grid">
+                    <div class="col-4">
+                            <img src="http://ebadam.com/media/catalog/product/cache/1/image/600x500/9df78eab33525d08d6e5fb8d27136e95/b/a/badam_2.jpg" alt="product">
+                        
+                            <div class="cart-button">
+                                <div class="price-box"><span class="actual-prc" style="color:red;text-decoration:line-through">334.00INR/Kg</span><span class="off-prc">299.30INR/Kg</span></div>
+                                <button (click)="addtocart()"><mat-icon>add_shopping_cart</mat-icon> ADD TO CART</button>
+                            </div>
+                    </div>
+                    <div class="col-4">
+                        <img src="http://ebadam.com/media/catalog/product/cache/1/image/600x500/9df78eab33525d08d6e5fb8d27136e95/k/a/kaju_2.jpg" alt="product">
+                        <div class="cart-button">
+                            <div class="price-box"><span class="actual-prc" style="color:red;text-decoration:line-through">1000.00INR/Kg</span><span class="off-prc">799.30INR/Kg</span></div>
+                            <button (click)="addtocart()"><mat-icon>add_shopping_cart</mat-icon> ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <img src="http://ebadam.com/media/catalog/product/cache/1/image/600x500/9df78eab33525d08d6e5fb8d27136e95/0/1/01.jpg" alt="product">
+                        <div class="cart-button">
+                            <div class="price-box"><span class="actual-prc" style="color:red;text-decoration:line-through">334.00INR/Kg</span><span class="off-prc">299.30INR/Kg</span></div>
+                            <button (click)="addtocart()"><mat-icon>add_shopping_cart</mat-icon> ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <img src="http://ebadam.com/media/catalog/product/cache/1/image/600x500/9df78eab33525d08d6e5fb8d27136e95/b/a/badam_3.jpg" alt="product">
+                        <div class="cart-button">
+                            <div class="price-box"><span class="actual-prc" style="color:red;text-decoration:line-through">334.00INR/Kg</span><span class="off-prc">299.30INR/Kg</span></div>
+                            <button (click)="addtocart()"><mat-icon>add_shopping_cart</mat-icon> ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="clr">&nbsp;</div>
+                    <div class="col-4">
+                        <img src="http://ebadam.com/media/catalog/product/cache/1/image/600x500/9df78eab33525d08d6e5fb8d27136e95/m/a/mamara_badam.jpg" alt="product">   
+                        <div class="cart-button">
+                            <div class="price-box"><span class="actual-prc" style="color:red;text-decoration:line-through">334.00INR/Kg</span><span class="off-prc">299.30INR/Kg</span></div>
+                            <button (click)="addtocart()"><mat-icon>add_shopping_cart</mat-icon> ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <img src="http://ebadam.com/media/catalog/product/cache/1/image/600x500/9df78eab33525d08d6e5fb8d27136e95/m/a/mamara_badam.jpg" alt="product">
+                        <div class="cart-button">
+                            <div class="price-box"><span class="actual-prc" style="color:red;text-decoration:line-through">334.00INR/Kg</span><span class="off-prc">299.30INR/Kg</span></div>
+                            <button (click)="addtocart()"><mat-icon>add_shopping_cart</mat-icon> ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <img src="http://ebadam.com/media/catalog/product/cache/1/image/600x500/9df78eab33525d08d6e5fb8d27136e95/a/n/anjeer_1.jpg" alt="product">
+                        <div class="cart-button">
+                            <div class="price-box"><span class="actual-prc" style="color:red;text-decoration:line-through">334.00INR/Kg</span><span class="off-prc">299.30INR/Kg</span></div>
+                            <button (click)="addtocart()"><mat-icon>add_shopping_cart</mat-icon> ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <img src="http://ebadam.com/media/catalog/product/cache/1/image/600x500/9df78eab33525d08d6e5fb8d27136e95/1/2/1233.jpg" alt="product">
+                        <div class="cart-button">
+                            <div class="price-box"><span class="actual-prc" style="color:red;text-decoration:line-through">334.00INR/Kg</span><span class="off-prc">299.30INR/Kg</span></div>
+                            <button (click)="addtocart()"><mat-icon>add_shopping_cart</mat-icon> ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                    <div class="clr">&nbsp;</div>
+            </div> 
+            </section>
+
+            <section class="products-section">
+                <div class="containter">
+
+                   
+                  
+                </div>
+            </section>
+
+           <app-store-footer></app-store-footer>
+        </div>
+    </div>
+</div>

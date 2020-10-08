@@ -1,0 +1,36 @@
+<div class="homePage">
+    <div class="storeFront">
+        <div class="full-width">
+          <app-store-header></app-store-header>
+         
+       
+            <section class="products-section" style="margin-top: 30px;">
+                <div class="containter">
+                    
+                  <div class="col-12">
+                    <div class="page-title"><h2 class="title">Login</h2></div>
+                    <div class="form">
+                            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                                <div class="form-full-width">
+                                  <mat-form-field style="width: 100%;" appearance="fill">
+                                    <mat-label>Username</mat-label>
+                                    <input matInput type="text" placeholder="Enter username"  formControlName="username">
+                                  </mat-form-field>
+                                  <mat-form-field style="width: 100%;" appearance="fill">
+                                    <mat-label>Password</mat-label>
+                                    <input matInput type="password" placeholder="Password"  formControlName="password">
+                                  </mat-form-field>
+                                  <button mat-raised-button type="submit" color="primary"  [disabled]="!loginForm.valid">Login</button>
+                                  <p style="display: inline-block; padding: 4px 10px;"><a routerLink="/register" title="lLogin">Don't have account? Create here.</a> </p>
+                                  <small><br>* By continuing, you agree to our <a href="#">Conditions of Use</a> and <a href="">Privacy Notice</a>.</small>
+                                </div>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+           <app-store-footer></app-store-footer>
+        </div>
+    </div>
+</div>

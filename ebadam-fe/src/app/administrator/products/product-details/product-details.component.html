@@ -1,0 +1,26 @@
+<div class="material-app">
+    <div class="main-body">
+        <div class="graphical-presentation">
+            <div class="row-full">
+                <div class="form">
+                    <div class="heading">
+                        <h2>Product Details - {{data.prod_name}}</h2>
+                    </div>
+                    <div class="form">
+                        
+                        <ul class="ProductDetails">
+                            <li><strong>Category Name:</strong> {{data.category.cat_name}}</li>
+                            <li><strong>Short Description:</strong> {{data.short_description}}</li>
+                            <li><strong>Description:</strong> {{data.description}}</li>
+                            <li><strong>Price Per KG:</strong> {{data.price_per_kg}}INR</li>
+                        </ul>
+
+                        <button  mat-raised-button color="primary" (click)="backtoList()">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clr"></div>
+        <!--common footer-->
+    </div>
+</div>
