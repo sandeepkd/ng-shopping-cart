@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {OverlayModule} from '@angular/cdk/overlay';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -52,6 +53,7 @@ import { RegisterComponent } from './frontend/register/register.component';
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
+    OverlayModule,
     ReactiveFormsModule,
     HttpClientModule,
     MatInputModule,

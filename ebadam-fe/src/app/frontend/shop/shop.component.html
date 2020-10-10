@@ -1,1 +1,86 @@
-<p>shop works!</p>
+<div class="homePage">
+    <div class="storeFront">
+        <div class="full-width">
+          <app-store-header></app-store-header>
+         
+            <section class="products-section" id="todaysDeal">
+              <div class="containter">
+                  <div class="section-title"><h3 class="title">All Products</h3></div>
+                   <div class="home-grid">
+                    <div class="product-filter">
+                        <form class="example-form">
+                            <mat-form-field class="example-full-width">
+                              <mat-label>Filter</mat-label>
+                              <input matInput placeholder="Filter Text" value="">
+                            </mat-form-field>
+                          </form>
+                    </div>
+                    <div class="col-4">
+                            <img src="http://ebadam.com/media/catalog/product/cache/1/image/600x500/9df78eab33525d08d6e5fb8d27136e95/b/a/badam_2.jpg" alt="product">
+                        
+                            <div class="cart-button">
+                                <div class="price-box"><span class="actual-prc" style="color:red;text-decoration:line-through">334.00INR/Kg</span><span class="off-prc">299.30INR/Kg</span></div>
+                                <button (click)="addtocart()"><mat-icon>add_shopping_cart</mat-icon> ADD TO CART</button>
+                            </div>
+                    </div>
+                    <div class="col-4">
+                        <img src="http://ebadam.com/media/catalog/product/cache/1/image/600x500/9df78eab33525d08d6e5fb8d27136e95/k/a/kaju_2.jpg" alt="product">
+                        <div class="cart-button">
+                            <div class="price-box"><span class="actual-prc" style="color:red;text-decoration:line-through">1000.00INR/Kg</span><span class="off-prc">799.30INR/Kg</span></div>
+                            <button (click)="addtocart()"><mat-icon>add_shopping_cart</mat-icon> ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <img src="http://ebadam.com/media/catalog/product/cache/1/image/600x500/9df78eab33525d08d6e5fb8d27136e95/0/1/01.jpg" alt="product">
+                        <div class="cart-button">
+                            <div class="price-box"><span class="actual-prc" style="color:red;text-decoration:line-through">334.00INR/Kg</span><span class="off-prc">299.30INR/Kg</span></div>
+                            <button (click)="addtocart()"><mat-icon>add_shopping_cart</mat-icon> ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <img src="http://ebadam.com/media/catalog/product/cache/1/image/600x500/9df78eab33525d08d6e5fb8d27136e95/b/a/badam_3.jpg" alt="product">
+                        <div class="cart-button">
+                            <div class="price-box"><span class="actual-prc" style="color:red;text-decoration:line-through">334.00INR/Kg</span><span class="off-prc">299.30INR/Kg</span></div>
+                            <button (click)="addtocart()"><mat-icon>add_shopping_cart</mat-icon> ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="clr">&nbsp;</div>
+                    <div class="col-4">
+                        <img src="http://ebadam.com/media/catalog/product/cache/1/image/600x500/9df78eab33525d08d6e5fb8d27136e95/m/a/mamara_badam.jpg" alt="product">   
+                        <div class="cart-button">
+                            <div class="price-box"><span class="actual-prc" style="color:red;text-decoration:line-through">334.00INR/Kg</span><span class="off-prc">299.30INR/Kg</span></div>
+                            <button (click)="addtocart()"><mat-icon>add_shopping_cart</mat-icon> ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <img src="http://ebadam.com/media/catalog/product/cache/1/image/600x500/9df78eab33525d08d6e5fb8d27136e95/m/a/mamara_badam.jpg" alt="product">
+                        <div class="cart-button">
+                            <div class="price-box"><span class="actual-prc" style="color:red;text-decoration:line-through">334.00INR/Kg</span><span class="off-prc">299.30INR/Kg</span></div>
+                            <button (click)="addtocart()"><mat-icon>add_shopping_cart</mat-icon> ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <img src="http://ebadam.com/media/catalog/product/cache/1/image/600x500/9df78eab33525d08d6e5fb8d27136e95/a/n/anjeer_1.jpg" alt="product">
+                        <div class="cart-button">
+                            <div class="price-box"><span class="actual-prc" style="color:red;text-decoration:line-through">334.00INR/Kg</span><span class="off-prc">299.30INR/Kg</span></div>
+                            <button (click)="addtocart()"><mat-icon>add_shopping_cart</mat-icon> ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <img src="http://ebadam.com/media/catalog/product/cache/1/image/600x500/9df78eab33525d08d6e5fb8d27136e95/1/2/1233.jpg" alt="product">
+                        <div class="cart-button">
+                            <div class="price-box"><span class="actual-prc" style="color:red;text-decoration:line-through">334.00INR/Kg</span><span class="off-prc">299.30INR/Kg</span></div>
+                            <button (click)="addtocart()"><mat-icon>add_shopping_cart</mat-icon> ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                    <div class="clr">&nbsp;</div>
+            </div> 
+            </section>
+
+         
+            <div class="clr">&nbsp;</div>
+           <app-store-footer></app-store-footer>
+        </div>
+    </div>
+</div>

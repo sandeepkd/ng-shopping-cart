@@ -12,4 +12,10 @@ export class ShopComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+  addtocart(){
+
+    alert("In Progress...")
+ }
+
 }

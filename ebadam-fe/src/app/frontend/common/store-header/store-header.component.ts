@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoreHeaderComponent implements OnInit {
 
+  isOpen = false;
+  isOpen2 = false;
+  loggedIn = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  showCategories(){
+  
+    alert("In Progress")
+
   }
 
 }

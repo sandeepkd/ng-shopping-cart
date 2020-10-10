@@ -7,6 +7,8 @@ import { AdministratorComponent } from './administrator/administrator.component'
 import { LoginComponent } from './frontend/login/login.component';
 import { RegisterComponent } from './frontend/register/register.component';
 import { MyAccountComponent } from './frontend/my-account/my-account.component';
+import { AboutComponent } from './frontend/about/about.component';
+import { ShopComponent } from './frontend/shop/shop.component';
 
 const routes: Routes = [
   {
@@ -29,6 +31,14 @@ const routes: Routes = [
     path: 'admin',
     loadChildren: () => import('./administrator/administrator.module')
       .then(m => m.AdministratorModule),
+  },
+  {
+    path: 'about-us',
+    component: AboutComponent,
+  },
+  {
+    path: 'products',
+    component: ShopComponent,
   },
   {
       path: '',

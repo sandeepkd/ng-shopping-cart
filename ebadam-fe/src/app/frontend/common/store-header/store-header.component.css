@@ -1,0 +1,23 @@
+.nav-list {
+    width: 100px;
+    border: solid 1px #ccc;
+    border-radius: 2px;
+    background: rgb(255, 238, 212);
+    text-align: left;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  .nav-list > li {
+    list-style-type: none;
+    border-bottom: solid 1px #8b8b8b;
+    padding: 8px 0;
+  }
+  
+  .nav-list > li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-list > li a{ text-decoration: none; font-size: 12px;}
+  .nav-list > li a:hover{ color: #a10303;}
+  

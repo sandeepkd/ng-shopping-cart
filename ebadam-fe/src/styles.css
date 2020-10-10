@@ -145,14 +145,14 @@ nav {
 .mat-drawer.mat-drawer-side{ z-index: 0 !important; }
 .mat-toolbar-row, .mat-toolbar-single-row{ padding: 0 6px !important; }
 
-
 /*----StoreFront Style-----*/
-.nav-storeFront{ height: 116px; background: #ffdcc8; position: sticky; top: 0; left: 0; right: 0; z-index: 2; display: block; float: none; }
+.nav-storeFront{ height: 116px; background: #fbf2ed; position: sticky; top: 0; left: 0; right: 0; z-index: 2; display: block; float: none; }
 .storeFront{ width: 100%; }
 h3.title{ font-size: 21px; }
 
 .page-title h2.title{text-align: center; padding: 10px; margin: 20px; border-bottom: 2px solid #c2c2c2;}
 .section-title{ text-align: center; padding: 10px; margin: 60px; border-bottom: 2px solid #c2c2c2;}
+.page-section-title{ text-align: left; padding: 10px 0px; margin:30px 20px ; border-bottom: 2px solid #c2c2c2;}
 .storeFront section .banner{ position: relative; height: 500px; width: 100%; max-width:1576px;  text-align: center; display: block; margin: auto; }
 .nav-top{ width: 100%; display: block; height: 62px; clear: both;}
 .nav-bottom{ width: 100%; display: block; text-align: right;height: 46px; background: #64300a; }
@@ -185,24 +185,38 @@ h3.title{ font-size: 21px; }
 .cart-button button mat-icon{ vertical-align: bottom; font-size: 24px;}
 .price-box{ padding: 10px;}
 .price-box span{ margin: 0 5px;}
+.nav-left button.menu-btn{ cursor: pointer;}
 /* Responsive CSS */
+.logo{ padding-top: 8px; position: absolute; }
+.mobile-navigation{ display: none; }
+.nav-sec-mobile{ display: none !important; }
+.page{ padding: 0 20px; text-align: left;}
+.page p{ text-align: left; }
 
-@media (max-width: 768px){
-    .mobile-menu{ 
-        display: block;
-    }
+@media (max-width: 1368px){
+    
 
-    .desk-menu{ 
-        display: none;
-    }
+}
 
+@media (max-width: 1024px){
+    .nav-sec-mobile{ display: inline-block !important;}
+    .menu-btn-nav { vertical-align: top; background: transparent; border: 1px solid #33333342; margin: 7px 12px 0; color: #fff; }
+    .mobile-navigation{ display: block; float: left; }
+    .logo{ padding-top: 8px; position: inherit; }
+    .ebadam-search{ width: 50%; margin-top: 0px;}
+    .nav-fill{ text-align: center; height: 35px;}
+    .nav-storeFront{ height: 225px; position: static;}
+    .nav-top{ height: 160px;}
+    .header-logo{ margin: auto; text-align: center;}
+    .nav-mid{ display: block; width: 100%;}
+    .nav-left {float: none;width: 100%;text-align: center; }
+    .nav-right { float: none; width: 100%; text-align: center; display: block;}
+     ul.nav-sec{ display: none;}
     .nav-meno-icon{ display: none;}
-
-    .col-6 {
-        width: 92%;
-        margin-bottom: 30px;
-    }
-
+    .nav-widget{ padding: 4px 28px;}
+    .col-6 { width: 92%; margin-bottom: 30px;}
+    .banner-widgets .widgets{width: 40%; min-height: 105px; margin-bottom: 25px; border: 18px solid #fae184c2 }
+    .banner-widgets .widgets h2{ padding-top: 12%}
     .flex {
         display: block;
     }
@@ -212,5 +226,36 @@ h3.title{ font-size: 21px; }
     }
     .flex-item {
         flex-basis: auto;
+    }
+    
+}
+
+@media (max-width: 768px){
+    
+    .col-4{ width: 48.99%; margin-bottom: 32px;}
+
+}
+
+@media (max-width: 540px){
+    .banner-widgets .widgets {
+        width: 85%;
+        min-height: 58px;
+        margin-bottom: 29px;
+        border: 12px solid #fae184c2;
+    }
+    .banner-widgets .widgets h2 {
+        padding-top: 3%;
+    }
+    .banner-widgets {
+        bottom: -80px;
+    }
+}
+
+@media (max-width: 441px){
+    .col-4{ width: 100%; }
+    .footer-widgets .widget {
+        display: block!important;
+        width: 100%!important;
+        margin: 20px!important;
     }
 }

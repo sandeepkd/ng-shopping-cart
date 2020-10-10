@@ -1,6 +1,24 @@
 <header class="nav-storeFront mat-elevation-z6">
     <div class="nav-top">
-        <div class="nav-left"><button class="menu-btn"><mat-icon>menu</mat-icon></button><img style="padding-top: 8px; position: absolute;" src="../../../assets/images/logo.png" alt="eBadam Logo" height="80"></div>
+        <div class="nav-left">
+            <div class="header-logo">
+            <button class="menu-btn" (click)="isOpen = !isOpen" type="button" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen">
+                <ul class="nav-list">
+                    <li><a routerLink="/" title="Home">Home</a></li>
+                    <li><a routerLink="/about-us" title="About Us">About Us</a></li>
+                    <li><a routerLink="/" title="Franchise">Franchise</a></li>
+                    <li><a routerLink="/" title="Contact Us">Contact Us</a></li>
+                    <li><a routerLink="/" title="Privacy Policy">Privacy</a></li>
+                    <li><a routerLink="/" title="Help">Help</a></li>
+                </ul>
+            </ng-template>
+            <a routerLink="/" title="Home">
+                <img class="logo" src="../../../assets/images/logo.png" alt="eBadam Logo" height="80"></a>
+            </div>
+        </div>
         <div class="nav-mid">
             <div class="nav-fill">
                <input type="search" class="ebadam-search" placeholder="search"><button class="search-btn">Go</button>
@@ -16,19 +34,42 @@
         </div>
     </div><br>
     <div class="nav-bottom">
+        <div class="mobile-navigation">
+        <button class="menu-btn-nav" (click)="isOpen2 = !isOpen2" type="button" cdkOverlayOrigin #trigger2="cdkOverlayOrigin">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger2" [cdkConnectedOverlayOpen]="isOpen2">
+            <ul class="nav-list">
+                <li><a routerLink="/" class="">Dry Fruits</a></li>
+                <li><a routerLink="/" class="">Spices</a></li>
+                <li><a routerLink="/" class="">Dehydrated Fruits</a></li>
+                <li><a routerLink="/" class="">Mukhwas</a></li>
+                <li><a routerLink="/" class="">Farsan</a></li>
+            </ul>
+        </ng-template>
+        </div>
         <ul class="nav-sec">
-            <li><a href="/" class="">All Categories</a></li>
-            <li><a href="/" class="">All Products</a></li>
+            <li style="color: #ffffff; cursor: pointer;" (click)="showCategories()">All Categories</li>
+            <li><a routerLink="/products" class="">All Products</a></li>
             <li><a href="/" class="">Dry Fruits</a></li>
             <li><a href="/" class="">Spices</a></li>
             <li><a href="/" class="">Dehydrated Fruits</a></li>
             <li><a href="/" class="">Mukhwas</a></li>
             <li><a href="/" class="">Farsan</a></li>
-            <li><a href="#todaysDeal" class="">Today's Deal</a></li>
-            <!-- <li><a href="/" class="">Orders</a></li>
-            <li><a href="/" class="">My Account</a></li> -->
-            <li><a routerLink="/login" class="">Login</a></li>
-            <li><a href="/" class="">Help</a></li>
+            <li><a href="/" class="">Orders</a></li>
+            <li><a href="/" class="">My Account</a></li>
+            <li><a href="/" class="">Logout</a></li>
+            <!-- <li><a routerLink="/login" class="">Login</a></li>
+            <li><a routerLink="/register" class="">Register</a></li> -->
+        </ul>
+        <ul class="nav-sec-mobile">
+            <li style="color: #ffffff; cursor: pointer;" (click)="showCategories()">All Categories</li>
+            <li><a routerLink="/products" class="">All Products</a></li>
+            <li><a href="/" class="">Orders</a></li>
+            <li *ngIf="loggedIn"><a href="/" class="">My Account</a></li>
+            <li *ngIf="loggedIn"><a href="/" class="">Logout</a></li>
+            <li *ngIf="!loggedIn"><a routerLink="/login" class="">Login</a></li>
+            <li *ngIf="!loggedIn"><a routerLink="/register" class="">Register</a></li>
         </ul>
     </div>
 </header>
