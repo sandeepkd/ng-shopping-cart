@@ -9,6 +9,8 @@ import { RegisterComponent } from './frontend/register/register.component';
 import { MyAccountComponent } from './frontend/my-account/my-account.component';
 import { AboutComponent } from './frontend/about/about.component';
 import { ShopComponent } from './frontend/shop/shop.component';
+import { ContactUsComponent } from './frontend/contact-us/contact-us.component';
+import { PrivacyPolicyComponent } from './frontend/privacy-policy/privacy-policy.component';
 
 const routes: Routes = [
   {
@@ -39,6 +41,14 @@ const routes: Routes = [
   {
     path: 'products',
     component: ShopComponent,
+  },
+  {
+    path: 'contact-us',
+    component: ContactUsComponent,
+  },
+  {
+    path: 'privacy-policy',
+    component: PrivacyPolicyComponent,
   },
   {
       path: '',

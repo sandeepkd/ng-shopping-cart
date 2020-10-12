@@ -30,6 +30,10 @@ import { StoreHeaderComponent } from './frontend/common/store-header/store-heade
 import { StoreFooterComponent } from './frontend/common/store-footer/store-footer.component';
 import { LoginComponent } from './frontend/login/login.component';
 import { RegisterComponent } from './frontend/register/register.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
+import { MatSelectModule } from '@angular/material/select';
+import { PrivacyPolicyComponent } from './frontend/privacy-policy/privacy-policy.component';
 
 
 @NgModule({
@@ -47,7 +51,8 @@ import { RegisterComponent } from './frontend/register/register.component';
     StoreHeaderComponent,
     StoreFooterComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,
@@ -65,6 +70,9 @@ import { RegisterComponent } from './frontend/register/register.component';
     MatTabsModule,
     AppRoutingModule,
     MatCarouselModule.forRoot(),
+    MatPaginatorModule,
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

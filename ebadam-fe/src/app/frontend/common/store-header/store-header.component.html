@@ -10,8 +10,8 @@
                     <li><a routerLink="/" title="Home">Home</a></li>
                     <li><a routerLink="/about-us" title="About Us">About Us</a></li>
                     <li><a routerLink="/" title="Franchise">Franchise</a></li>
-                    <li><a routerLink="/" title="Contact Us">Contact Us</a></li>
-                    <li><a routerLink="/" title="Privacy Policy">Privacy</a></li>
+                    <li><a routerLink="/contact-us" title="Contact Us">Contact Us</a></li>
+                    <li><a routerLink="/privacy-policy" title="Privacy Policy">Privacy</a></li>
                     <li><a routerLink="/" title="Help">Help</a></li>
                 </ul>
             </ng-template>
@@ -57,7 +57,7 @@
             <li><a href="/" class="">Mukhwas</a></li>
             <li><a href="/" class="">Farsan</a></li>
             <li><a href="/" class="">Orders</a></li>
-            <li><a href="/" class="">My Account</a></li>
+            <li><a href="/my-account" class="">My Account</a></li>
             <li><a href="/" class="">Logout</a></li>
             <!-- <li><a routerLink="/login" class="">Login</a></li>
             <li><a routerLink="/register" class="">Register</a></li> -->
@@ -66,7 +66,7 @@
             <li style="color: #ffffff; cursor: pointer;" (click)="showCategories()">All Categories</li>
             <li><a routerLink="/products" class="">All Products</a></li>
             <li><a href="/" class="">Orders</a></li>
-            <li *ngIf="loggedIn"><a href="/" class="">My Account</a></li>
+            <li *ngIf="loggedIn"><a href="/my-account" class="">My Account</a></li>
             <li *ngIf="loggedIn"><a href="/" class="">Logout</a></li>
             <li *ngIf="!loggedIn"><a routerLink="/login" class="">Login</a></li>
             <li *ngIf="!loggedIn"><a routerLink="/register" class="">Register</a></li>

@@ -1,1 +1,43 @@
-.my-account{ max-width: 768px; width: 100%; margin: auto;}
+.my-account {
+  max-width: 768px;
+  width: 100%;
+  margin: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.field-style {
+  display: block;
+  padding: 10px 0 0 0;
+}
+
+.form-style {
+  width: 60%;
+  margin: auto;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.productImg-container-style {
+  width: 20%;
+}
+
+.productImg-style {
+  height: 10%;
+}
+
+.wl-container-style {
+  text-align: center;
+}
+
+.orders-container-style {
+  text-align: center;
+}
+
+button {
+  margin: 2%;
+}
