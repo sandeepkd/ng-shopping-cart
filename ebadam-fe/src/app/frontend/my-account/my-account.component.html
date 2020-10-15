@@ -12,15 +12,137 @@
                           <div class="my-account">
                               <mat-tab-group>
                                 <mat-tab label="My Account">
-                                  <mat-card> 
+                                  <!-- <mat-card> 
                                       Name : {{name}} <br> 
                                       Email : {{email}}<br>
                                       Username : {{username}}
                                       <br><br><br><br><br><br><br><br><br><br><br><br><br>
-                                   </mat-card>
+                                   </mat-card> -->
+                                   <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-style">
+                                    <mat-form-field class="field-style">
+                                      <mat-label>Name:</mat-label>
+                                      <input matInput placeholder="Enter You Name" required formControlName="name">                                 
+                                    </mat-form-field>
+                                    <mat-form-field class="field-style">
+                                      <mat-label>Email:</mat-label>
+                                      <input matInput placeholder="Enter You Email" required formControlName="email">                                 
+                                    </mat-form-field>
+                                    <mat-form-field class="field-style">
+                                      <mat-label>Username:</mat-label>
+                                      <input matInput placeholder="Enter You Username" required formControlName="username">                                 
+                                    </mat-form-field>
+                                    <div class="button-container">
+                                      <button mat-raised-button color="primary"
+                                      matTooltip="Update your account details"
+                                      type="submit" 
+                                      >Update</button>
+                                    </div>
+                                   </form>
                                   </mat-tab>
-                                <mat-tab label="Orders"> <h3>Order List</h3><br><br><br><br><br><br><br><br><br><br><br><br><br></mat-tab>
-                                <mat-tab label="Wish List"> <h3>Wish List</h3><br><br><br><br><br><br><br><br><br><br><br><br><br> </mat-tab>
+                                <mat-tab label="Orders"> <h3>Your Orders</h3>
+                                  <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+
+                                  <div class="mat-elevation-z8">
+                                    <table mat-table [dataSource]="dataSource">
+                                  
+                                      <!-- OrderID Column -->
+                                      <ng-container matColumnDef="orderId">
+                                        <th mat-header-cell *matHeaderCellDef class="orders-container-style"> ORDER #ID </th>
+                                        <td mat-cell *matCellDef="let element" class="orders-container-style"> {{element.orderId}} </td>
+                                      </ng-container>
+                                  
+                                      <!-- Status Column -->
+                                      <ng-container matColumnDef="status">
+                                        <th mat-header-cell *matHeaderCellDef class="orders-container-style"> STATUS </th>
+                                        <td mat-cell *matCellDef="let element" class="orders-container-style"> {{element.status}} </td>
+                                      </ng-container>
+                                  
+                                      <!-- Date Column -->
+                                      <ng-container matColumnDef="date">
+                                        <th mat-header-cell *matHeaderCellDef class="orders-container-style"> DATE </th>
+                                        <td mat-cell *matCellDef="let element" class="orders-container-style"> {{element.date}} </td>
+                                      </ng-container>
+                                  
+                                      <!-- Payment Column -->
+                                      <ng-container matColumnDef="payment">
+                                        <th mat-header-cell *matHeaderCellDef class="orders-container-style"> PAYMENT </th>
+                                        <td mat-cell *matCellDef="let element" class="orders-container-style"> {{element.payment}} </td>
+                                      </ng-container>
+
+                                      <!-- Shipping Column -->
+                                      <ng-container matColumnDef="shipping">
+                                        <th mat-header-cell *matHeaderCellDef class="orders-container-style"> SHIPPING </th>
+                                        <td mat-cell *matCellDef="let element" class="orders-container-style"> {{element.shipping}} </td>
+                                      </ng-container>
+
+                                      <!-- Total Column -->
+                                      <ng-container matColumnDef="total">
+                                        <th mat-header-cell *matHeaderCellDef class="orders-container-style"> TOTAL </th>
+                                        <td mat-cell *matCellDef="let element" class="orders-container-style"> {{element.total}} </td>
+                                      </ng-container>
+
+                                      <!-- Actions Column -->
+                                      <ng-container matColumnDef="actions">
+                                        <th mat-header-cell  *matHeaderCellDef class="orders-container-style"> ACTIONS </th>
+                                        <td mat-cell *matCellDef="let element" class="orders-container-style">
+                                             <button mat-raised-button color="primary" > {{ element.actions }} </button>
+                                        </td>
+                                      </ng-container>
+
+                                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                    </table>
+                                  
+                                    <mat-paginator #firstPaginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                                  </div>
+
+                                </mat-tab>
+                                <mat-tab label="Wish List"> <h3>Your Wishlisted Items</h3>
+                                  <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br>  -->
+
+                                  <div class="mat-elevation-z8">
+                                    <table mat-table [dataSource]="dataSource_wl">
+                                  
+                                      <!-- ProductImage Column -->
+                                      <ng-container matColumnDef="productImage">
+                                        <th mat-header-cell *matHeaderCellDef class="wl-container-style"> PRODUCT IMAGE </th>
+                                        <td mat-cell *matCellDef="let element" class="productImg-container-style wl-container-style"><img src={{element.productImage}} alt="product_image" class="productImg-style"></td>
+                                      </ng-container>
+                                  
+                                      <!-- ProductName Column -->
+                                      <ng-container matColumnDef="productName">
+                                        <th mat-header-cell *matHeaderCellDef class="wl-container-style"> PRODUCT NAME </th>
+                                        <td mat-cell *matCellDef="let element" class="wl-container-style"> {{element.productName}} </td>
+                                      </ng-container>
+                                  
+                                      <!-- UnitPrice Column -->
+                                      <ng-container matColumnDef="unitPrice">
+                                        <th mat-header-cell *matHeaderCellDef class="wl-container-style"> UNIT PRICE </th>
+                                        <td mat-cell *matCellDef="let element" class="wl-container-style"> {{element.unitPrice}} </td>
+                                      </ng-container>
+                                  
+                                      <!-- StockStatus Column -->
+                                      <ng-container matColumnDef="stockStatus">
+                                        <th mat-header-cell *matHeaderCellDef class="wl-container-style"> STOCK STATUS </th>
+                                        <td mat-cell *matCellDef="let element" class="wl-container-style"> {{element.stockStatus}} </td>
+                                      </ng-container>
+
+                                      <!-- Actions Column -->
+                                      <ng-container matColumnDef="actions">
+                                        <th mat-header-cell  *matHeaderCellDef class="wl-container-style"> ACTIONS </th>
+                                        <td mat-cell *matCellDef="let element" class="wl-container-style">
+                                             <button mat-raised-button color="primary" > ADD TO CART </button>
+                                             <button mat-raised-button color="warn" > REMOVE </button>
+                                        </td>
+                                      </ng-container>
+                                  
+                                      <tr mat-header-row *matHeaderRowDef="displayedColumnsWl"></tr>
+                                      <tr mat-row *matRowDef="let row; columns: displayedColumnsWl;"></tr>
+                                    </table>
+                                  
+                                    <mat-paginator #secondPaginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                                  </div>
+                                </mat-tab>
                               </mat-tab-group>
                           </div>
                     </div>

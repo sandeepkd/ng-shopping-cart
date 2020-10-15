@@ -1,1 +1,49 @@
-<p>contact-us works!</p>
+<div class="homePage">
+    <div class="storeFront">
+        <div class="full-width">
+          <app-store-header></app-store-header>
+       
+            <section class="products-section" id="todaysDeal">
+              <div class="containter">
+                  <div class="page-section-title"><h2>Contact Us</h2></div>
+                <div class="page">
+                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form-style">
+                        <mat-form-field class="field-style">
+                          <mat-label>Name:</mat-label>
+                          <input matInput placeholder="Enter You Name" required formControlName="name">                                 
+                        </mat-form-field>
+                        <mat-form-field class="field-style">
+                          <mat-label>Email:</mat-label>
+                          <input matInput placeholder="Enter You Email" required formControlName="email">                                 
+                        </mat-form-field>
+                        <mat-form-field class="field-style">
+                            <mat-label>Contact Subject:</mat-label>
+                            <mat-select formControlName="contactSubs">
+                                <mat-option *ngFor="let contactSub of contactSubject" [value]="contactSub.value">
+                                  {{contactSub.viewValue}}
+                                </mat-option>
+                              </mat-select>
+                          </mat-form-field>
+                        <mat-form-field class="field-style">
+                          <mat-label>Message:</mat-label>
+                          <!-- <input matInput placeholder="Enter You Message" required formControlName="message"> -->
+                          <textarea matInput placeholder="Enter You Message" required formControlName="message"></textarea>
+                        </mat-form-field>
+                        <div>
+                          <button mat-raised-button color="primary"
+                          matTooltip="Submit your enquiry, complaint or feedback"
+                          type="submit" 
+                          >Submit</button>
+                        </div>
+                       </form>
+                </div>
+                <div class="clr">&nbsp;</div>
+                </div>
+            </section>
+
+          
+
+           <app-store-footer></app-store-footer>
+        </div>
+    </div>
+</div>
